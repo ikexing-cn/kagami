@@ -4,4 +4,16 @@ export default defineNuxtConfig({
     '@nuxt/devtools',
     '@unocss/nuxt',
   ],
+  vite: {
+    build: {
+      target: 'esnext',
+    },
+  },
+  nitro: {
+    esbuild: {
+      options: {
+        target: 'esnext',
+      },
+    },
+  },
 })

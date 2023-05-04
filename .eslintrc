@@ -1,3 +1,18 @@
 {
-  "extends": "@antfu"
+  "extends": "@antfu",
+  "rules": {
+    "brace-style": [
+      "warn",
+      "1tbs"
+    ],
+    "@typescript-eslint/brace-style": [
+      "warn",
+      "1tbs"
+    ],
+    "vue/brace-style": [
+      "warn",
+      "1tbs"
+    ],
+    "antfu/if-newline": "off"
+  }
 }
