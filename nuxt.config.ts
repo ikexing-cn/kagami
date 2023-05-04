@@ -2,6 +2,6 @@
 export default defineNuxtConfig({
   modules: [
     '@nuxt/devtools',
-    "@unocss/nuxt",
-  ]
+    '@unocss/nuxt',
+  ],
 })
