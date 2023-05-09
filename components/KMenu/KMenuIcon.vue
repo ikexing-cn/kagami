@@ -10,9 +10,9 @@ defineProps<{
 <template>
   <li
     :class="[active && 'text-blue']"
-    flex="~ center" cursor-pointer gap-2 font-bold
+    flex="~ center" base-hover gap-2 font-bold
   >
-    <span text-4 lg-text-3 :class="icon" />
+    <span :class="icon" text-4 lg-text-3 />
     <span
       :class="[expand && 'block!']" hidden
       leading="3.5" text="3.5" lg="block!"

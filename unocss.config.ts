@@ -13,6 +13,7 @@ import {
 export default defineConfig({
   shortcuts: {
     'flex-center': 'flex items-center justify-center',
+    'base-hover': 'hover:color-blue-5 cursor-pointer transition-color transition-300',
   },
   presets: [
     presetUno({ attributifyPseudo: true }),

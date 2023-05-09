@@ -10,7 +10,7 @@ const { expandMenu, toggleExpandMenu } = useMenu()
 
     <span
       class="i-carbon:menu"
-      absolute left-6 cursor-pointer lg-hidden
+      base-hover absolute left-6 lg-hidden
       :class="expandMenu && 'bg-blue'"
       @click="toggleExpandMenu"
     />
