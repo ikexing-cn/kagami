@@ -1,0 +1,47 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model RssGroup {
+  id        Int      @id @default(autoincrement())
+  title     String   @unique
+  link      Link[]
+  enabled   Boolean  @default(true)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Link {
+  id        Int       @id @default(autoincrement())
+  url       String    @unique
+  episodes  Episode[]
+  priority  Int       @default(0)
+  enabled   Boolean   @default(true)
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+  Rss       RssGroup?      @relation(fields: [rssId], references: [id])
+  rssId     Int?
+}
+
+model Episode {
+  id         Int      @id @default(autoincrement())
+  skip       Boolean  @default(false)
+  downloaded Boolean  @default(false)
+  episode    Int
+  group      String
+  subtitles  String
+  resolution String
+  format     String
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+  Link       Link?    @relation(fields: [linkId], references: [id])
+  linkId     Int?
+}
