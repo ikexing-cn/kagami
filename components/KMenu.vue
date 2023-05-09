@@ -22,5 +22,3 @@ const { currentMenu, expandMenu } = useMenu()
     </ul>
   </aside>
 </template>
-
-

@@ -27,7 +27,7 @@ model Link {
   enabled   Boolean   @default(true)
   createdAt DateTime  @default(now())
   updatedAt DateTime  @updatedAt
-  Rss       RssGroup?      @relation(fields: [rssId], references: [id])
+  Rss       RssGroup? @relation(fields: [rssId], references: [id])
   rssId     Int?
 }
 

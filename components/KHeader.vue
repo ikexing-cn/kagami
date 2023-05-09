@@ -22,5 +22,3 @@ const { expandMenu, toggleExpandMenu } = useMenu()
   </header>
   <div w-full b="b" />
 </template>
-
-
