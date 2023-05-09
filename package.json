@@ -6,7 +6,9 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "test": "vitest --test-timeout=10000",
+    "test:dev": "vitest -u --test-timeout=10000"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.38.5",
@@ -15,12 +17,15 @@
     "@types/node": "^18",
     "@types/pg": "^8.6.6",
     "@unocss/nuxt": "^0.51.8",
+    "dotenv": "^16.0.3",
     "eslint": "^8.39.0",
     "fast-xml-parser": "^4.2.2",
     "jsdom": "^22.0.0",
-    "nuxt": "^3.4.3"
+    "nuxt": "^3.4.3",
+    "vitest": "^0.31.0"
   },
   "dependencies": {
+    "chatgpt": "^5.2.4",
     "pg": "^8.10.0",
     "winston": "^3.8.2",
     "winston-daily-rotate-file": "^4.7.1"
