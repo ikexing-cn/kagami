@@ -4,9 +4,7 @@ const { Client } = PG
 let _client: InstanceType<typeof Client> | null = null
 
 export async function useDBClient() {
-  if (_client) {
-    return _client
-  } else {
+  if (!_client) {
     _client = new Client({
       host: process.env.POSTGRES_SQL_HOST,
       port: Number(process.env.POSTGRES_SQL_PORT),
@@ -15,6 +13,6 @@ export async function useDBClient() {
       password: process.env.POSTGRES_SQL_PASSWORD,
     })
     await _client.connect()
-    return _client
   }
+  return _client
 }

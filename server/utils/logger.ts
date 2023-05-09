@@ -27,10 +27,8 @@ export function useLogger(): Logger {
     })
   }
 
-  if (_logger) {
-    return _logger
-  } else {
+  if (!_logger)
     _logger = cretaeLoggerInner()
-    return _logger
-  }
+
+  return _logger
 }
