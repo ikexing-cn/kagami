@@ -3,7 +3,7 @@ import { describe, expect, it } from 'vitest'
 import { useChatGPTParse } from '../server/utils/parser/openai'
 import type { Episode } from '~/types/parser'
 
-describe('row-parser', async () => {
+describe('chatgpt-row-parser', async () => {
   dotenv.config()
 
   it('should parse', async () => {
@@ -18,7 +18,7 @@ describe('row-parser', async () => {
       episode: 3,
       subtitles: 'CHT',
       resolution: '1080p',
-      format: 'AVC AAC',
+      // skip format because gpt may will output `AVC AAC MP4` or `AVC AAC`
     })
   })
 })
