@@ -5,7 +5,7 @@ const { expandMenu, toggleExpandMenu } = useMenu()
 <template>
   <header flex="~ center">
     <h1 text-8 font="bold sans italic">
-      KAgemi
+      KAgami
     </h1>
 
     <span
