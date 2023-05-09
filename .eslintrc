@@ -1,5 +1,5 @@
 {
-  "extends": "@antfu",
+  "extends": ["@antfu", "@unocss"],
   "rules": {
     "brace-style": [
       "warn",

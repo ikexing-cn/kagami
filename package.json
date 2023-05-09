@@ -10,24 +10,29 @@
     "test": "vitest --test-timeout=10000",
     "test:dev": "vitest -u --test-timeout=10000"
   },
+  "dependencies": {
+    "@anu-vue/nuxt": "^0.13.1",
+    "@vueuse/core": "^10.1.2",
+    "@vueuse/nuxt": "^10.1.2",
+    "chatgpt": "^5.2.4",
+    "pg": "^8.10.0",
+    "winston": "^3.8.2",
+    "winston-daily-rotate-file": "^4.7.1"
+  },
   "devDependencies": {
-    "@antfu/eslint-config": "^0.38.5",
-    "@ctrl/qbittorrent": "^5.2.0",
-    "@nuxt/devtools": "^0.4.5",
-    "@types/node": "^18",
+    "@antfu/eslint-config": "^0.38.6",
+    "@ctrl/qbittorrent": "^6.1.0",
+    "@iconify-json/carbon": "^1.1.16",
+    "@nuxt/devtools": "^0.4.6",
+    "@types/node": "^18.16.6",
     "@types/pg": "^8.6.6",
-    "@unocss/nuxt": "^0.51.8",
+    "@unocss/eslint-config": "^0.51.12",
+    "@unocss/nuxt": "^0.51.12",
     "dotenv": "^16.0.3",
     "eslint": "^8.39.0",
     "fast-xml-parser": "^4.2.2",
     "jsdom": "^22.0.0",
     "nuxt": "^3.4.3",
     "vitest": "^0.31.0"
-  },
-  "dependencies": {
-    "chatgpt": "^5.2.4",
-    "pg": "^8.10.0",
-    "winston": "^3.8.2",
-    "winston-daily-rotate-file": "^4.7.1"
   }
 }

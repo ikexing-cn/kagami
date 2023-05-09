@@ -1,4 +1,9 @@
+<script setup lang="ts">
+import '~/assets/global.css'
+</script>
+
 <template>
-  <div />
-  <NuxtPage />
+  <NuxtLayout>
+    <NuxtPage />
+  </NuxtLayout>
 </template>

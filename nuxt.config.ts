@@ -1,8 +1,10 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   modules: [
-    '@nuxt/devtools',
+    '@anu-vue/nuxt',
     '@unocss/nuxt',
+    '@vueuse/nuxt',
+    '@nuxt/devtools',
   ],
   vite: {
     build: {
