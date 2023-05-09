@@ -21,5 +21,3 @@ defineProps<{
     </span>
   </li>
 </template>
-
-<style scoped></style>

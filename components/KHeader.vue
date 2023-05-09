@@ -23,4 +23,4 @@ const { expandMenu, toggleExpandMenu } = useMenu()
   <div w-full b="b" />
 </template>
 
-<style lang="less" scoped></style>
+
