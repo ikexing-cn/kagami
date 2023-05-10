@@ -1,20 +1,9 @@
-// TODO: refactor to prisma
+import { PrismaClient } from '@prisma/client'
 
-// import PG from 'pg'
+let _prisma: PrismaClient | null = null
+export function usePrisma() {
+  if (!_prisma)
+    _prisma = new PrismaClient()
 
-// const { Client } = PG
-// let _client: InstanceType<typeof Client> | null = null
-
-// export async function useDBClient() {
-//   if (!_client) {
-//     _client = new Client({
-//       host: process.env.POSTGRES_SQL_HOST,
-//       port: Number(process.env.POSTGRES_SQL_PORT),
-//       database: process.env.POSTGRES_SQL_DATABASE,
-//       user: process.env.POSTGRES_SQL_USER,
-//       password: process.env.POSTGRES_SQL_PASSWORD,
-//     })
-//     await _client.connect()
-//   }
-//   return _client
-// }
+  return _prisma
+}
