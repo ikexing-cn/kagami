@@ -17,5 +17,5 @@ export function useChatGPT() {
 
 export async function useChatGPTParse(msg: string) {
   const chatgpt = useChatGPT()
-  return await chatgpt.sendMessage(msg)
+  return JSON.parse((await chatgpt.sendMessage(msg)).text)
 }

@@ -5,11 +5,10 @@ import { useLogger } from '../server/utils/logger'
 import { parseFileName } from '../server/utils/parser/local'
 import type { Episode } from '~/types/parser'
 
+dotenv.config()
 const logger = useLogger()
 
 describe.skip('chatgpt-row-parser', async () => {
-  dotenv.config()
-
   it('gpt parser', async () => {
     const { text } = await useChatGPTParse('[Lilith-Raws] 和山田谈场 Lv999 的恋爱 / Yamada-kun to Lv999 no Koi wo Suru - 03 [Baha][WEB-DL][1080p][AVC AAC][CHT][MP4]')
     const res = JSON.parse(text) as Episode

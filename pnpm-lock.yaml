@@ -13,6 +13,9 @@ dependencies:
   '@vueuse/nuxt':
     specifier: ^10.1.2
     version: 10.1.2(nuxt@3.4.3)(vue@3.2.47)
+  anitomy:
+    specifier: ^0.0.15
+    version: 0.0.15
   chatgpt:
     specifier: ^5.2.4
     version: 5.2.4
@@ -2404,6 +2407,11 @@ packages:
       json-schema-traverse: 1.0.0
       require-from-string: 2.0.2
       uri-js: 4.4.1
+    dev: false
+
+  /anitomy@0.0.15:
+    resolution: {integrity: sha512-Q2w9MOkFhAKsLs4ES4KkMn4ehotHPW2QkA06hsLWoFIJx3l6OUPBieIkO4gcNSou89YYgApKPEx5VHbrtyLawg==}
+    engines: {node: '>=v18.16.0'}
     dev: false
 
   /ansi-escapes@4.3.2:

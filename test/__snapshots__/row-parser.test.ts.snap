@@ -1,8 +1,0 @@
-// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
-
-exports[`local parser > local parser 1`] = `
-{
-  "file/type": "[MP4]",
-  "meta/publisher-name": "[Lilith-Raws]",
-}
-`;
