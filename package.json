@@ -7,8 +7,8 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "test": "vitest --test-timeout=10000",
-    "test:dev": "vitest -u --test-timeout=10000"
+    "test": "vitest",
+    "test:dev": "vitest -u"
   },
   "dependencies": {
     "@anu-vue/nuxt": "^0.13.1",

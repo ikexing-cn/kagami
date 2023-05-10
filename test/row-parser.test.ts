@@ -8,8 +8,8 @@ import type { Episode } from '~/types/parser'
 dotenv.config()
 const logger = useLogger()
 
-describe.skip('chatgpt-row-parser', async () => {
-  it('gpt parser', async () => {
+describe('row-parser', async () => {
+  it.skip('gpt parser', async () => {
     const { text } = await useChatGPTParse('[Lilith-Raws] 和山田谈场 Lv999 的恋爱 / Yamada-kun to Lv999 no Koi wo Suru - 03 [Baha][WEB-DL][1080p][AVC AAC][CHT][MP4]')
     const res = JSON.parse(text) as Episode
     expect(res).toMatchObject({
@@ -23,10 +23,8 @@ describe.skip('chatgpt-row-parser', async () => {
       resolution: '1080p',
       // skip format because gpt may will output `AVC AAC MP4` or `AVC AAC`
     })
-  })
-})
+  }, { timeout: 10000 })
 
-describe('local parser', async () => {
   it('local parser', () => {
     const text = '[爱恋字幕社][熊熊勇闯异世界 Punch!][Kuma Kuma Kuma Bear Punch!][05][1080P][MP4][GB][简中] [292.23 MB]'
     const value = parseFileName(text)

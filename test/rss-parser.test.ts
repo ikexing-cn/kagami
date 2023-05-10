@@ -209,4 +209,4 @@ describe('rss-parser', async () => {
       }
     `)
   })
-})
+}, { timeout: 10000 })
