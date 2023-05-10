@@ -4,13 +4,15 @@ defineProps<{
   text: string
   active: boolean
   expand: boolean
+  to?: string
 }>()
 </script>
 
 <template>
-  <li
+  <NuxtLink
+    :to="to"
     :class="[active && 'text-blue']"
-    flex="~ center" base-hover gap-2 font-bold
+    flex="~ center" gap-2 font-bold base-hover
   >
     <span :class="icon" text-4 lg-text-3 />
     <span
@@ -19,5 +21,5 @@ defineProps<{
     >
       {{ text }}
     </span>
-  </li>
+  </NuxtLink>
 </template>
