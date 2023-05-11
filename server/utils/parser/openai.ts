@@ -1,13 +1,16 @@
 import { ChatGPTAPI } from 'chatgpt'
+import { useConfig } from '../config'
 import { parserPromp } from './promp'
 
 let _chatGPT: InstanceType<typeof ChatGPTAPI> | null = null
 
-export function useChatGPT() {
+export async function useChatGPT() {
   if (!_chatGPT) {
+    const { getItem } = useConfig()
+
     _chatGPT = new ChatGPTAPI({
-      apiKey: process.env.OPENAI_API_KEY!,
-      apiBaseUrl: process.env.OPENAI_API_BASE_URL ?? 'https://api.openai.com/v1',
+      apiKey: await getItem('OPENAI_API_KEY'),
+      apiBaseUrl: await getItem('OPENAI_API_BASE_URL'),
       systemMessage: parserPromp,
     })
   }
@@ -16,6 +19,6 @@ export function useChatGPT() {
 }
 
 export async function useChatGPTParse(msg: string) {
-  const chatgpt = useChatGPT()
+  const chatgpt = await useChatGPT()
   return JSON.parse((await chatgpt.sendMessage(msg)).text)
 }
