@@ -1,11 +1,9 @@
-import * as dotenv from 'dotenv'
 import { describe, expect, it } from 'vitest'
 import { useChatGPTParse } from '../server/utils/parser/openai'
 import { useLogger } from '../server/utils/logger'
 import { parseFileName } from '../server/utils/parser/local'
 import type { Episode } from '~/types/parser'
 
-dotenv.config()
 const logger = useLogger()
 
 describe('row-parser', async () => {

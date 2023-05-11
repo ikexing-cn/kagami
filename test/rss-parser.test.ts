@@ -1,8 +1,5 @@
-import * as dotenv from 'dotenv'
 import { describe, expect, it } from 'vitest'
 import { createRssJson } from '../server/utils/rss/parser'
-
-dotenv.config()
 
 describe('rss-parser', async () => {
   it('should parse', async () => {

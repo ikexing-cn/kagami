@@ -48,9 +48,6 @@ devDependencies:
   '@unocss/nuxt':
     specifier: ^0.51.12
     version: 0.51.12(postcss@8.4.23)(vite@4.3.4)(webpack@5.82.0)
-  dotenv:
-    specifier: ^16.0.3
-    version: 16.0.3
   eslint:
     specifier: ^8.39.0
     version: 8.39.0
