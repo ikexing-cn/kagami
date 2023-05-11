@@ -6,7 +6,7 @@ let _config: Storage | null = null
 
 const configured = {
   OPENAI_API_KEY: process.env.OPENAI_API_KEY || '',
-  OPENAI_API_BASE_URL: process.env.OPENAI_API_BASE_URL || '',
+  OPENAI_API_BASE_URL: process.env.OPENAI_API_BASE_URL || 'https://api.openai.com/v1',
 }
 
 export function useConfig() {
