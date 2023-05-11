@@ -12,6 +12,6 @@ export default defineConfig({
     setupFiles: ['dotenv/config'], // this line,
   },
   resolve: {
-    alias: [{ find: '~', replacement: resolve(__dirname, 'src') }],
+    alias: [{ find: '~', replacement: resolve(__dirname) }],
   },
 })
